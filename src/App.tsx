@@ -1,15 +1,20 @@
-import React, { FC } from 'react'
-import PostsContainer from './components/PostsContainer'
-import UsersContainer from './components/UsersContainer'
+import { FC } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Profile from './components/Profile'
+import Home from './components/Home'
 
 const App: FC = () => {
   return (
-    <div className='flex-1 p-4 min-h-screen bg-white'>
-      <div style={{ display: 'flex' }}>
-        <PostsContainer />
-        <UsersContainer />
+    <BrowserRouter>
+      <Header />
+      <div className='flex-1 min-h-screen bg-white'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/users/:id' element={<Profile />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   )
 }
 

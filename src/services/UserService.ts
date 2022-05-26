@@ -8,9 +8,14 @@ export const usersAPI = createApi({
   }),
   endpoints: (build) => ({
     fetchAllUsers: build.query<IUser[], number>({
-      query: (limit, number = 5) => ({
+      query: (limit) => ({
         url: '/users',
-        param: { _limit: limit },
+        params: { _limit: limit },
+      }),
+    }),
+    fetchIdUser: build.query<IUser, number>({
+      query: (userId) => ({
+        url: `/users/${userId}`,
       }),
     }),
   }),

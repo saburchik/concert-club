@@ -3,10 +3,15 @@ interface ICompany {
   bs: string
 }
 
+interface IAddress {
+  city: string
+}
+
 export interface IUser {
   id: number
   username: string
   name: string
+  address: IAddress
   email: string
   phone: string
   website: string
