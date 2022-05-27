@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div className='bg-black h-20'>
+    <div className='bg-black w-full h-20 absolute z-10  my-0 mx-auto'>
       <div className='flex items-center justify-between max-w-5xl h-full my-0 mx-auto p-4'>
         <Link className='text-white font-bold text-3xl uppercase' to='/'>
           Concert CLUB

@@ -11,6 +11,9 @@ export const usersAPI = createApi({
       query: (limit) => ({
         url: '/users',
         params: { _limit: limit },
+        headers: {
+          'content-type': 'text/plain',
+        },
       }),
     }),
     fetchIdUser: build.query<IUser, number>({
