@@ -16,7 +16,7 @@ const Users: FC = () => {
       </div>
       {!isLoading && !error && (
         <div>
-          <div className='flex flex-col justify-around items-center bg-pilots w-full inset-0 h-screen bg-no-repeat bg-center bg-cover'>
+          <div className='flex flex-col justify-around items-center bg-pilots bg-black w-full inset-0 h-screen bg-no-repeat bg-center bg-cover'>
             <div />
             <div className='flex flex-col justify-center items-center gap-4 pt-12 mt-36 w-full bg-shadow'>
               <h1 className='text-white text-5xl font-bold max-w-6xl'>

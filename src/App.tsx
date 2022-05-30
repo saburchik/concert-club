@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Profile from './components/Profile'
 import Home from './components/Home'
+import Articles from './components/Articles'
 
 const App: FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: FC = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/users/:id' element={<Profile />} />
+          <Route path='/users/:id/posts' element={<Articles />} />
         </Routes>
       </div>
     </BrowserRouter>

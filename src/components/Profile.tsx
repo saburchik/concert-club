@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import { usersAPI } from '../services/UserService'
 import Error from './common/Error'
 import Loading from './common/Loading'
+import Title from './common/Title'
+import Posts from './Posts'
 
 function Profile() {
   const params = useParams()
@@ -53,13 +55,7 @@ function Profile() {
             </li>
             <li className='flex border-b border-r border-black w-1/12	sm:w-4'></li>
           </ul>
-          <div className='flex-1'>
-            <div className='w-1/12' />
-            <div className='w-4/5 mx-auto flex-1'>
-              <h2>Посты</h2>
-            </div>
-            <div className='w-1/12' />
-          </div>
+          <Posts userId={Number(params.id)} />
         </div>
       )}
     </div>
