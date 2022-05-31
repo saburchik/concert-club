@@ -1,20 +1,16 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { IUser } from '../types/types'
+import { UserProps } from '../types/types'
 
-interface UserItemProps {
-  user: IUser
-}
-
-const UserItem: FC<UserItemProps> = ({ user }) => {
+const User: FC<UserProps> = ({ user }) => {
   return (
-    <li className='flex flex-col justify-between border w-60 p-4 border-gray-400 h-36'>
-      <div className='flex-1'>
+    <li className='p-4 border-gray-400 flex-1 border min-w-fit sm:!min-w-[100%] lm:min-w-[48%]'>
+      <article className='flex-1 mb-9'>
         <h3 className='tex-black text-base font-bold mb-1'>{user.name}</h3>
         <p className='text-gray-400 text-xs	'>{user.address.city}</p>
-      </div>
+      </article>
       <Link
-        className='px-5 py-2.5 text-white bg-black w-fit h-fit'
+        className='block px-5 py-2.5 text-center text-white bg-black min-w-[180px] max-w-[329px]'
         to={`/users/${user.id}`}
       >
         Смотреть профиль
@@ -23,4 +19,4 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   )
 }
 
-export default UserItem
+export default User

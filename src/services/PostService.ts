@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react'
-import { IPost } from '../types/types'
+import { IDs, IPost } from '../types/types'
 
 export const postsAPI = createApi({
   reducerPath: 'postsAPI',
@@ -8,10 +8,19 @@ export const postsAPI = createApi({
   }),
   endpoints: (build) => ({
     fetchAllPosts: build.query<IPost[], number>({
-      query: (limit, number = 5) => ({
-        url: '/posts',
-        params: { _limit: limit },
+      query: (id) => ({
+        url: `/posts`,
+        params: { userId: id, _limit: 4 },
       }),
+    }),
+    fetchIdPost: build.query<IPost[], IDs>({
+      query: (obj) => {
+        const { userId, postId } = obj
+        return {
+          url: `/users/${userId}/posts`,
+          params: { id: postId },
+        }
+      },
     }),
   }),
 })

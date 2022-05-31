@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import Profile from './components/Profile'
-import Home from './components/Home'
-import Articles from './components/Articles'
+import Profile from './components/pages/Profile'
+import Home from './components/pages/Home'
+import Articles from './components/pages/Articles'
 
 const App: FC = () => {
   return (

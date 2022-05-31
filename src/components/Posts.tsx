@@ -1,21 +1,21 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { usersAPI } from '../services/UserService'
+import { postsAPI } from '../services/PostService'
 import { IPost } from '../types/types'
 
 const Posts: FC<IPost> = ({ userId }) => {
-  const { data: posts } = usersAPI.useFetchIdPostsQuery(userId)
+  const { data: posts } = postsAPI.useFetchAllPostsQuery(userId)
 
   return (
     <div className='flex-1 border-y border-black pb-8 w-full'>
-      <section className=' mx-auto flex-1 p-4 max-w-5xl my-0 '>
-        <h2 className='font-medium text-4xl py-4'>Посты</h2>
+      <section className='mx-auto flex-1 py-4 max-w-5xl lm:mx-4'>
+        <h2 className='font-medium text-4xl py-4 mx-4'>Посты</h2>
         <div className='flex justify-between flex-wrap gap-4 w-full max-w-5x'>
           {posts &&
             posts.map((post) => (
               <article
                 key={post.id}
-                className='flex-1 border px-8 py-4 border-black min-w-[390px] sm:min-w-full px-4'
+                className='flex-1 border px-8 py-4 border-black min-w-[390px] sm:min-w-full'
               >
                 <h4 className='flex gap-4 text-base justify-between font-bold mb-2'>
                   <Link

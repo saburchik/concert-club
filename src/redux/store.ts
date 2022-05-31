@@ -1,19 +1,23 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-//import { postsAPI } from '../services/PostService'
+import { commentsAPI } from '../services/CommentService'
+import { postsAPI } from '../services/PostService'
 import { usersAPI } from '../services/UserService'
 
 const rootReducer = combineReducers({
-  // comments: commentsReducer,
-  // usersReducer,
   [usersAPI.reducerPath]: usersAPI.reducer,
-  //[postsAPI.reducerPath]: postsAPI.reducer,
+  [postsAPI.reducerPath]: postsAPI.reducer,
+  [commentsAPI.reducerPath]: commentsAPI.reducer,
 })
 
 export const store = () => {
   return configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(usersAPI.middleware),
+      getDefaultMiddleware().concat(
+        usersAPI.middleware,
+        postsAPI.middleware,
+        commentsAPI.middleware
+      ),
   })
 }
 

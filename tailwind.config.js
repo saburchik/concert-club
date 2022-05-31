@@ -4,11 +4,13 @@ module.exports = {
     screens: {
       sm: { max: '500px' },
       mm: { max: '790px' },
+      lm: { max: '990px' },
+      mmin: { min: '500px' },
     },
     extend: {
       minWidth: {
         '234px': '234px',
-        '16px': '16px'
+        '16px': '16px',
       },
       colors: {
         'dark-blue': '#0D1E4B',
@@ -21,8 +23,9 @@ module.exports = {
       },
       backgroundImage: {
         pilots: "url('/src/pilots.jpg')",
-        shadow: 'radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%)'
-      }
+        shadow:
+          'radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%)',
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1,
+      "name": "Grisha",
+      "email": "tai@gmail.com"
+    },
+    {
+      "id": 2,
+      "body": "some ssx",
+      "postId": 1,
+      "name": "Hung",
+      "email": "korea@gmail.com"
+    },
+    {
+      "id": 3,
+      "body": "some commxxent",
+      "postId": 1,
+      "name": "Emma",
+      "email": "subaru@gmail.com"
+    },
+    {
+      "id": 4,
+      "body": "some commxxxsasa ent",
+      "postId": 1,
+      "name": "Viva",
+      "email": "murasaki@gmail.com"
+    },
+    {
+      "id": 5,
+      "body": "some a as sasas",
+      "postId": 1,
+      "name": "Eva",
+      "email": "honda@gmail.com"
+    }
+  ]
+}

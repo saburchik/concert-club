@@ -1,8 +1,5 @@
-import React, { FC } from 'react'
-
-interface ErrorProps {
-  text: string
-}
+import { FC } from 'react'
+import { ErrorProps } from '../../types/types'
 
 const Error: FC<ErrorProps> = ({ text }) => {
   return (

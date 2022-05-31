@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { usersAPI } from '../services/UserService'
-import Error from './common/Error'
-import Loading from './common/Loading'
-import Title from './common/Title'
-import Posts from './Posts'
+import { usersAPI } from '../../services/UserService'
+import Error from '../common/Error'
+import Loading from '../common/Loading'
+import Posts from '../Posts'
 
 function Profile() {
   const params = useParams()
@@ -21,27 +20,27 @@ function Profile() {
       </div>
       {!isLoading && !error && (
         <div className='w-full mt-9'>
-          <ul className='flex-1 flex border-t border-l border-black'>
-            <li className='flex border-r border-black w-1/12	 sm:w-4'></li>
-            <li className='flex-1 border-r border-black w-4/5 p-4	font-medium text-4xl'>
+          <ul className='flex-1 flex justify-center border-t border-l border-black w-full'>
+            <li className='flex border-r border-black px-2'></li>
+            <li className='flex-1 border-r border-black w-[98%] max-w-5xl p-4 font-medium text-4xl'>
               {user?.name}
             </li>
-            <li className='flex border-r border-black w-1/12	 sm:w-4'></li>
+            <li className='flex border-black px-2'></li>
           </ul>
-          <ul className='flex border-t border-l border-black mb-9'>
-            <li className='flex border-b border-r border-black w-1/12	sm:w-4'></li>
-            <li className='flex-1 border-black w-4/5	'>
+          <ul className='flex justify-center border-t border-l border-b border-black mb-9'>
+            <li className='flex border-r border-black px-2'></li>
+            <li className='flex-1 border-black w-[98%] max-w-5xl'>
               <ul className='flex flex-wrap border-black'>
                 <li className='flex items-center border-b border-r border-black 	p-4 sm:flex-1'>
                   {user?.address.city}
                 </li>
-                <li className='flex items-center border-b border-r border-black 	p-4 min-w-234px mm:flex-1'>
+                <li className='flex items-center border-b border-r border-black p-4 mm:flex-1 mm:min-w-234px'>
                   {user?.email}
                 </li>
-                <li className='flex flex-1 items-center border-b border-r border-black 	p-4 min-w-234px'>
+                <li className='flex items-center border-b border-r border-black	p-4 mm:flex-1 mm:min-w-234px'>
                   {user?.phone}
                 </li>
-                <li className='flex-1	flex'>
+                <li className='flex flex-1'>
                   <button className='flex-1 p-2.5 h-full w-full border-x border-t border-dark-blue bg-black text-white min-w-234px'>
                     Написать сообщение
                   </button>
@@ -53,7 +52,7 @@ function Profile() {
                 </li>
               </ul>
             </li>
-            <li className='flex border-b border-r border-black w-1/12	sm:w-4'></li>
+            <li className='flex px-2'></li>
           </ul>
           <Posts userId={Number(params.id)} />
         </div>
