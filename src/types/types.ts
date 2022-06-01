@@ -38,6 +38,7 @@ export interface IDs {
   postId: number | null
 }
 
+// == CommentServiceLocal.ts, CommentService.ts
 export interface IComment {
   postId: number
   id?: number
@@ -46,7 +47,26 @@ export interface IComment {
   body?: string
 }
 
+// == CommentForm.tsx
+export type Inputs = {
+  username: string
+  email: string
+  body: string
+}
+
+// == CommentForm.tsx
+export type CommentFormProp = {
+  postId: number
+}
+
 // == Error.tsx
 export interface ErrorProps {
   text: string
+}
+
+// == CommentItem.tsx
+export type CommentItemProps = {
+  name: string | undefined
+  email: string | undefined
+  body: string | undefined
 }

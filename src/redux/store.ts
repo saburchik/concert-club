@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { commentsAPI } from '../services/CommentService'
+import { commentsLocalAPI } from '../services/CommentServiceLocal'
 import { postsAPI } from '../services/PostService'
 import { usersAPI } from '../services/UserService'
 
@@ -7,6 +8,7 @@ const rootReducer = combineReducers({
   [usersAPI.reducerPath]: usersAPI.reducer,
   [postsAPI.reducerPath]: postsAPI.reducer,
   [commentsAPI.reducerPath]: commentsAPI.reducer,
+  [commentsLocalAPI.reducerPath]: commentsLocalAPI.reducer,
 })
 
 export const store = () => {
@@ -16,7 +18,8 @@ export const store = () => {
       getDefaultMiddleware().concat(
         usersAPI.middleware,
         postsAPI.middleware,
-        commentsAPI.middleware
+        commentsAPI.middleware,
+        commentsLocalAPI.middleware
       ),
   })
 }

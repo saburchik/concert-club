@@ -1,16 +1,35 @@
-# Getting Started
+# Concert Club
 
-To use the POST method to send a comment,
-you need to install a local json-server [JSON-SERVER Docs](https://github.com/typicode/json-server).
+### Installation
 
-Install JSON Server:
+You need to clone the project and install a local server([JSON-Server](https://github.com/typicode/json-server))
+
+```sh
+git clone https://github.com/saburchik/concert-club.git
+
+Install the dependencies and a local server:
+
+npm install
 
 npm install -g json-server
+```
 
-then, to create a file db.json at the root of the project.
+### Run the project
 
-## Starting a local server
+```sh
+npm start
 
-### `json-server --watch db.json --port 3004`
+Run the project and the local server:
 
-Also don't forget to launch the project\*
+json-server --watch db.json --port 3004
+```
+
+## Tech
+
+During development , I used such technologies as:
+
+- [ReactJS](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redux-Toolkit Query](https://redux-toolkit.js.org/)
+- [Tailwindcss](https://tailwindcss.com/docs/installation)

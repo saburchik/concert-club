@@ -27,7 +27,7 @@ const Users: FC = () => {
             </div>
 
             <div className=''>
-              <button className='bg-white py-3 px-10 font-bold text-sm'>
+              <button className='duration-500 hover:bg-slate-400 bg-white py-3 px-10 font-bold text-sm'>
                 Купить билет
               </button>
             </div>

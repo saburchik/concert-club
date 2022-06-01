@@ -10,7 +10,7 @@ const User: FC<UserProps> = ({ user }) => {
         <p className='text-gray-400 text-xs	'>{user.address.city}</p>
       </article>
       <Link
-        className='block px-5 py-2.5 text-center text-white bg-black min-w-[180px] max-w-[329px]'
+        className='duration-500 hover:bg-slate-600 block px-5 py-2.5 text-center text-white bg-black min-w-[180px] max-w-[329px]'
         to={`/users/${user.id}`}
       >
         Смотреть профиль

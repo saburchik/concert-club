@@ -20,7 +20,7 @@ const Posts: FC<IPost> = ({ userId }) => {
                 <h4 className='flex gap-4 text-base justify-between font-bold mb-2'>
                   <Link
                     to={`/users/${userId}/posts?id=${post.id}`}
-                    className='first-letter:uppercase'
+                    className='first-letter:uppercase duration-400 hover:text-red-300'
                   >
                     {post.title}
                   </Link>
